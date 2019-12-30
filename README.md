@@ -10,12 +10,26 @@ Using this component you are able to:
 ![integration example](./assets/integration.png "Integration example")
 
 ## Setup
-This integration is currently acheived as a _"custom component"_ which has to be installed manually:
+### Installation using HACS (recommanded)
 
+_Learn more [about HACS](https://hacs.xyz/)_
+
+This integration is not yet listed in the default repositories of HACS, you have to configure it manually:
+1. Go to the HACS in your Home-Assistant installation
+1. At the top of the HACS screen, select **settings**
+1. Add a custom repo `dr1rrb/ha-twinkly` as `integration` (don't forget to click save)
+1. In the **integrations** tab, you can now search and install "Twinkly"
+
+_Continue to [configuration](#configuration)_
+
+### Manual install
 1. From the root directory of your HA, create a directory `custom_components/twinkly`
-1. Downalod all files from the [`custom_components/twinkly` directory](./custom_components/twinkly) of this repo and copy them in the folder you just created
-1. In you `configuration.yaml`, in the `light` section add your twinkly device:
+1. Download all files from the [`custom_components/twinkly` directory](./custom_components/twinkly) of this repo and copy them in the folder you just created
 
+_Continue to [configuration](#configuration)_
+
+### Configuration
+1. In you `configuration.yaml`, in the `light` section add your twinkly device:
 ```yaml
 light:
   - platform: twinkly
@@ -36,7 +50,8 @@ And for the "custom effect" (or defaults with mapping) it would require a way to
 which does not seam to be supported.
 
 ## Road map
-- [ ] Configure HACS
+- [x] Configure HACS
+- [ ] Add this repo to the default repo of HACS
 - [ ] Add support of online / offline (and make sure that we don't have to restart HA when we plug-in a device)
 - [ ] Add discovery of devices on LAN
 - [ ] Add support of floating IP adress
