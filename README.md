@@ -33,10 +33,10 @@ _Continue to [configuration](#configuration)_
 ```yaml
 light:
   - platform: twinkly
-    host: 192.168.123.123 # cf. remaks below
+    host: 192.168.123.123 # cf. remarks below
 ```
 
-> **Remaks**
+> **Remarks**
 > 
 > We currently do not support floating IP address, so make sure to assign a static IP to your twkinly device.
 > You can configure it in your router.
