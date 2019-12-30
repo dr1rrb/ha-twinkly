@@ -27,6 +27,14 @@ light:
 > We currently do not support floating IP address, so make sure to assign a static IP to your twkinly device.
 > You can configure it in your router.
 
+## FAQ
+### Is it possible to change the effect from HA?
+Unfortunately, when you change the effect from the Twinkly app, it actually re-write the full light effect to the device.
+So it means that to change the effect from HA, we would have to copy those effects and push them from HA each time. 
+If it's possible for the "default effects" this would however override the mapping made from the app.
+And for the "custom effect" (or defaults with mapping) it would require a way to extract the effect from the twinkly app,
+which does not seam to be supported.
+
 ## Road map
 - [ ] Configure HACS
 - [ ] Add support of online / offline (and make sure that we don't have to restart HA when we plug-in a device)
@@ -40,7 +48,3 @@ https://labs.f-secure.com/blog/twinkly-twinkly-little-star
 @joshkay https://github.com/joshkay/home-assistant-twinkly
 
 https://xled-docs.readthedocs.io/en/latest/rest_api.html
-
-
-
-
