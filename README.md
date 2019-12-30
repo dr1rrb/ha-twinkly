@@ -13,7 +13,7 @@ Using this component you are able to:
 This integration is currently acheived as a _"custom component"_ which has to be installed manually:
 
 1. From the root directory of your HA, create a directory `custom_components/twinkly`
-1. Downalod all files from the [`twinkly` directory](./twinkly) of this repo and copy them in the folder you just created
+1. Downalod all files from the [`custom_components/twinkly` directory](./custom_components/twinkly) of this repo and copy them in the folder you just created
 1. In you `configuration.yaml`, in the `light` section add your twinkly device:
 
 ```yaml
