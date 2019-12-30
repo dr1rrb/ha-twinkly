@@ -1,0 +1,8 @@
+{
+  "domain": "twinkly",
+  "name": "Twkinkly",
+  "documentation": "https://www.home-assistant.io/integrations/twinkly",
+  "requirements": [],
+  "dependencies": [],
+  "codeowners": ["@dr1rrb"]
+}
