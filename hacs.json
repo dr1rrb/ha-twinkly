@@ -1,0 +1,6 @@
+{
+  "name": "Twinkly",
+  "domains": ["light"],
+  "iot_class": "local_polling",
+  "render_readme": false
+}
