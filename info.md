@@ -8,18 +8,21 @@ Using this component you are able to:
 
 ![integration example](./assets/integration.png "Integration example")
 
-## Configuration
+### Configuration
 1. In you `configuration.yaml`, in the `light` section add your twinkly device:
 ```yaml
 light:
   - platform: twinkly
-    host: 192.168.123.123 # cf. remarks below
+    host: 192.168.123.123
+    name: Christmas tree 
 ```
 
-> **Remarks**
-> 
-> We currently do not support floating IP address, so make sure to assign a static IP to your twkinly device.
-> You can configure it in your router.
+- **Host:** [Required] We currently do not support floating IP address, so make sure to assign a static IP to your twkinly device.
+  You can configure it in your router.
+- **Name:** [Optional] Defines the name of this device. Even if it's optional, **we higly recommend you to configure it**. 
+  If not set, the name will be retreived from the device, which means that if the device is not available (in jully for instance ;)), 
+  it will fallback to the default name which is 'Twinkly light' (and the device ID will be updated accordingly by HA).
+
 
 ## FAQ
 ### Is it possible to change the effect from HA?
