@@ -44,7 +44,7 @@ Unfortunately, when you change the effect from the Twinkly app, it actually re-w
 So it means that to change the effect from HA, we would have to copy those effects and push them from HA each time. 
 If it's possible for the "default effects" this would however override the mapping made from the app.
 And for the "custom effect" (or defaults with mapping) it would require a way to extract the effect from the twinkly app,
-which does not seam to be supported.
+which does not seems to be supported.
 
 ## Road map
 - [x] Configure HACS
