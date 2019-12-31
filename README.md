@@ -12,13 +12,7 @@ Using this component you are able to:
 ## Setup
 ### Installation using HACS (recommended)
 
-_Learn more [about HACS](https://hacs.xyz/)_
-
-This integration is not yet listed in the default repositories of HACS, you have to configure it manually:
-1. Go to the HACS in your Home-Assistant installation
-1. At the top of the HACS screen, select **settings**
-1. Add a custom repo `dr1rrb/ha-twinkly` as `integration` (don't forget to click save)
-1. In the **integrations** tab, you can now search and install "Twinkly"
+This integration is available in the [Home Assistant Community Store](https://hacs.xyz/), just search for "Twinkly" from the integrations tab.
 
 _Continue to [configuration](#configuration)_
 
@@ -36,15 +30,13 @@ light:
     host: 192.168.123.123
     name: Christmas tree 
 ```
+2. Restart Home-Assistant
 
 - **Host:** [Required] We currently do not support floating IP address, so make sure to assign a static IP to your twkinly device.
   You can configure it in your router.
 - **Name:** [Optional] Defines the name of this device. Even if it's optional, **we higly recommend you to configure it**. 
   If not set, the name will be retreived from the device, which means that if the device is not available (in jully for instance ;)), 
   it will fallback to the default name which is 'Twinkly light' (and the device ID will be updated accordingly by HA).
-
-#### Name
-
 
 ## FAQ
 ### Is it possible to change the effect from HA?
@@ -56,7 +48,7 @@ which does not seam to be supported.
 
 ## Road map
 - [x] Configure HACS
-- [ ] Add this repo to the default repo of HACS: _[in progress](https://github.com/hacs/default/pull/107)_
+- [x] Add this repo to the default repo of HACS
 - [x] Add support of online / offline (and make sure that we don't have to restart HA when we plug-in a device)
 - [ ] Add discovery of devices on LAN
 - [ ] Add support of floating IP adress

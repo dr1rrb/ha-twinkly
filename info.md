@@ -16,6 +16,7 @@ light:
     host: 192.168.123.123
     name: Christmas tree 
 ```
+2. Restart Home-Assistant
 
 - **Host:** [Required] We currently do not support floating IP address, so make sure to assign a static IP to your twkinly device.
   You can configure it in your router.
