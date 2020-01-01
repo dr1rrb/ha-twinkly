@@ -125,7 +125,8 @@ class TwinklyLight(Light):
 
 		try:
 			self._is_on = await self.get_is_on()
-			self._brightness = (await self.get_brigthness()) * 2.55
+			
+			self._brightness = (await self.get_brigthness()) * 2.55 if self._is_on else 0
 			
 			device_info = await self.get_device_info()
 			for	key,value in device_info.items():
