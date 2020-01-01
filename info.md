@@ -1,15 +1,15 @@
 # Twinkly for Home-Assistant
 
-Add support of [twinkly christmas lights](https://twinkly.com/) 
+Adds support of [twinkly christmas lights](https://twinkly.com/) 
 
 Using this component you are able to:
 - Turn lights on and off 
 - Configure the brigthness
 
-![integration example](./assets/integration.png "Integration example")
+![integration example](https://raw.githubusercontent.com/dr1rrb/ha-twinkly/master/assets/integration.png "Integration example")
 
-### Configuration
-1. In you `configuration.yaml`, in the `light` section add your twinkly device:
+## Configuration
+1. In your `configuration.yaml`, in the `light` section, add your twinkly device:
 ```yaml
 light:
   - platform: twinkly
@@ -18,12 +18,11 @@ light:
 ```
 2. Restart Home-Assistant
 
-- **Host:** [Required] We currently do not support floating IP address, so make sure to assign a static IP to your twkinly device.
-  You can configure it in your router.
-- **Name:** [Optional] Defines the name of this device. Even if it's optional, **we higly recommend you to configure it**. 
-  If not set, the name will be retreived from the device, which means that if the device is not available (in jully for instance ;)), 
+- **Host:** _[Required]_ We currently do not support floating IP address, so make sure to assign a static IP to your twinkly device.
+  You can assign it from your router's config.
+- **Name:** _[Optional]_ Defines the name of this device. Even if it's optional, **we higly recommend you to configure it**. 
+  If not set, the name will be retreived from the device, which means that if the device is not available (in july for instance ;)), 
   it will fallback to the default name which is 'Twinkly light' (and the device ID will be updated accordingly by HA).
-
 
 ## FAQ
 ### Is it possible to change the effect from HA?

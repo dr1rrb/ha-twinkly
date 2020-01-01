@@ -1,6 +1,6 @@
 # Twinkly for Home-Assistant
 
-This projects lets you control your [twinkly christmas lights](https://twinkly.com/) 
+This project lets you control your [twinkly christmas lights](https://twinkly.com/) 
 from [Home-Assistant](https://www.home-assistant.io/)
 
 Using this component you are able to:
@@ -10,20 +10,17 @@ Using this component you are able to:
 ![integration example](./assets/integration.png "Integration example")
 
 ## Setup
-### Installation using HACS (recommended)
+### Installation
 
-This integration is available in the [Home Assistant Community Store](https://hacs.xyz/), just search for "Twinkly" from the integrations tab.
+The recommended way to install this integration is using the [Home Assistant Community Store (HACS)](https://hacs.xyz/). Search for "Twinkly" from the integrations tab.
 
-_Continue to [configuration](#configuration)_
+If you prefer, you can also install it manually:
+1. From the root directory of your HA, create a directory `custom_components/twinkly`.
+1. Download all files from the [`custom_components/twinkly` directory](./custom_components/twinkly) of this repo and copy them in the folder you just created.
 
-### Manual install
-1. From the root directory of your HA, create a directory `custom_components/twinkly`
-1. Download all files from the [`custom_components/twinkly` directory](./custom_components/twinkly) of this repo and copy them in the folder you just created
-
-_Continue to [configuration](#configuration)_
 
 ### Configuration
-1. In you `configuration.yaml`, in the `light` section add your twinkly device:
+1. In your `configuration.yaml`, in the `light` section add your twinkly device:
 ```yaml
 light:
   - platform: twinkly
@@ -32,10 +29,10 @@ light:
 ```
 2. Restart Home-Assistant
 
-- **Host:** [Required] We currently do not support floating IP address, so make sure to assign a static IP to your twkinly device.
-  You can configure it in your router.
-- **Name:** [Optional] Defines the name of this device. Even if it's optional, **we higly recommend you to configure it**. 
-  If not set, the name will be retreived from the device, which means that if the device is not available (in jully for instance ;)), 
+- **Host:** _[Required]_ We currently do not support floating IP address, so make sure to assign a static IP to your twinkly device.
+  You can assign it from your router's config.
+- **Name:** _[Optional]_ Defines the name of this device. Even if it's optional, **we higly recommend you to configure it**. 
+  If not set, the name will be retreived from the device, which means that if the device is not available (in july for instance ;)), 
   it will fallback to the default name which is 'Twinkly light' (and the device ID will be updated accordingly by HA).
 
 ## FAQ
@@ -46,10 +43,11 @@ If it's possible for the "default effects" this would however override the mappi
 And for the "custom effect" (or defaults with mapping) it would require a way to extract the effect from the twinkly app,
 which does not seems to be supported.
 
-## Road map
+## Roadmap
 - [x] Configure HACS
-- [x] Add this repo to the default repo of HACS
-- [x] Add support of online / offline (and make sure that we don't have to restart HA when we plug-in a device)
+- [x] Add this repo to the default repos list of HACS
+- [x] Add support of online / offline (and make sure that we don't have to restart HA when we plug a device)
+- [ ] Add ability to setup this integration from the UI
 - [ ] Add discovery of devices on LAN
 - [ ] Add support of floating IP adress
 - [ ] Merge as a component in the HA repo
