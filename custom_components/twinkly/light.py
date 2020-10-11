@@ -96,6 +96,10 @@ class TwinklyLight(LightEntity):
         )
 
     @property
+    def icon(self) -> str:
+        return "mdi:string-lights"
+
+    @property
     def is_on(self) -> bool:
         """Return true if light is on."""
         return self._is_on
