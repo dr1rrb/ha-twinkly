@@ -4,7 +4,7 @@ import logging
 from typing import Any, Optional
 import voluptuous as vol
 from aiohttp import ClientResponseError, ClientTimeout
-from homeassistant.components.light import (ATTR_BRIGHTNESS, PLATFORM_SCHEMA, SUPPORT_BRIGHTNESS, Light)
+from homeassistant.components.light import (ATTR_BRIGHTNESS, PLATFORM_SCHEMA, SUPPORT_BRIGHTNESS, LightEntity)
 import homeassistant.helpers.config_validation as cv
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 
@@ -45,7 +45,7 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
 
 	return True
 
-class TwinklyLight(Light):
+class TwinklyLight(LightEntity):
 	"""Implementation of the light for the Twinkly service."""
 
 	def __init__(self, name, host, session):
