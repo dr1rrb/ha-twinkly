@@ -1,5 +1,27 @@
 # Twinkly for Home-Assistant
 
+
+# >>> IMPORTANT NOTICE <<<
+
+This integration [has been merged in Home-Assistant](https://github.com/home-assistant/core/pull/42103) core repository 
+and will be available direclty from the HA UI starting from v0.119.
+This repo will either be archived at this date, either be used as backlog for the twinkly integration in HA,
+**BUT the custom integration hosted by this repo won't be updated anymore** (and might be removed at some point).
+
+-------------------------
+
+# >>> UPDATE FROM HACS / custom_components <<<
+
+1. Remove all the twinkly lights you have defined in your `configuration.yaml` file
+1. Restart Home-Assistant
+1. In Home-Assistant go to **settings > integrations > + add > "twinkly"**
+1. Set the "host" of the entity you just removed from the `configuration.yaml` file
+1. Repeat 3. and 4. for all the devices you have
+1. Enjoy 🎄
+
+-------------------------
+
+
 This project lets you control your [twinkly christmas lights](https://twinkly.com/) 
 from [Home-Assistant](https://www.home-assistant.io/)
 
@@ -47,10 +69,11 @@ which does not seems to be supported.
 - [x] Configure HACS
 - [x] Add this repo to the default repos list of HACS
 - [x] Add support of online / offline (and make sure that we don't have to restart HA when we plug a device)
-- [ ] Add ability to setup this integration from the UI
+- [x] Add ability to setup this integration from the UI
+- [x] Merge as a component in the HA repo
+- [ ] Replace custom client per https://github.com/scrool/xled 
 - [ ] Add discovery of devices on LAN
 - [ ] Add support of floating IP adress
-- [ ] Merge as a component in the HA repo
 
 ## Thanks and ref
 https://labs.f-secure.com/blog/twinkly-twinkly-little-star
